@@ -1,10 +1,13 @@
 module.exports = {
   webpack5: true,
   images: {
-    domains: ["gravatar.com"],
+    domains: ["gravatar.com", "images.unsplash.com"],
   },
   eslint: {
     dirs: ["components", "layouts", "lib", "pages"],
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
   },
   async headers() {
     return [
