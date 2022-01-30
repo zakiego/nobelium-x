@@ -1,40 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .task-list-item:before {
+    @apply hidden;
+  }
+  .un-effect {
+    background: linear-gradient(currentColor 0 0) 0 100% / var(--d, 0) 1.5px
+      no-repeat;
+    transition: background-size 0.24s ease-in-out;
+  }
+  .un-effect:hover {
+    --d: 100%;
+  }
+}
+
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: "IBM Plex Sans";
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
-  font-named-instance: 'Regular';
-  src: url('/fonts/IBMPlexSansVar-Roman.woff2') format('woff2');
+  font-named-instance: "Regular";
+  src: url("/fonts/IBMPlexSansVar-Roman.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: "IBM Plex Sans";
   font-weight: 100 900;
   font-display: swap;
   font-style: italic;
-  font-named-instance: 'Italic';
-  src: url('/fonts/IBMPlexSansVar-Italic.woff2') format('woff2');
+  font-named-instance: "Italic";
+  src: url("/fonts/IBMPlexSansVar-Italic.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Source Serif';
+  font-family: "Source Serif";
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
-  font-named-instance: 'Regular';
-  src: url('/fonts/SourceSerif.var.woff2') format('woff2');
+  font-named-instance: "Regular";
+  src: url("/fonts/SourceSerif.var.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Source Serif';
+  font-family: "Source Serif";
   font-weight: 100 900;
   font-display: swap;
   font-style: italic;
-  font-named-instance: 'Italic';
-  src: url('/fonts/SourceSerif-Italic.var.woff2') format('woff2');
+  font-named-instance: "Italic";
+  src: url("/fonts/SourceSerif-Italic.var.woff2") format("woff2");
 }
 
 html {
@@ -82,7 +97,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .sticky-nav-full {
-  @apply border-b border-opacity-50 border-gray-200 dark:border-gray-600 dark:border-opacity-50;
+  @apply border-b border-gray-200 border-opacity-50 dark:border-gray-600 dark:border-opacity-50;
 }
 
 .header-name {
@@ -120,7 +135,7 @@ nav {
 
 @media (min-width: 768px) {
   .sticky-nav-full {
-    @apply max-w-full border-b border-opacity-50 border-gray-200 dark:border-gray-600 dark:border-opacity-50;
+    @apply max-w-full border-b border-gray-200 border-opacity-50 dark:border-gray-600 dark:border-opacity-50;
   }
   .header-name {
     display: block;
@@ -129,7 +144,7 @@ nav {
   }
   .sticky-nav-full .header-name {
     opacity: 1;
-    @apply dark:text-gray-300 text-gray-600;
+    @apply text-gray-600 dark:text-gray-300;
   }
 }
 
