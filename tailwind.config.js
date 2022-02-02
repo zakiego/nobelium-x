@@ -23,7 +23,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['"IBM Plex Sans"', ...fontFamily.sans, ...fontSansCJK],
+        sans: ["system-ui", ...fontFamily.sans, ...fontSansCJK],
         // sans: ["Inter", ...fontFamily.sans],
         serif: ['"Source Serif"', ...fontFamily.serif, ...fontSerifCJK],
         noEmoji: [
